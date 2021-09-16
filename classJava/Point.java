@@ -3,12 +3,25 @@ package classJava;
 import java.util.Scanner;
 
 public class Point {
+    Scanner sc = new Scanner(System.in);
+    //Khoi tao gia tri
     int x, y;
         
-        //Phuong thuc khoi tao Diem
+        //Phuong thuc gan toa do
         void insertPoint(int x, int y){
             this.x = x;
             this.y = y;
+        }
+
+        //Phuong thuc nhap vao toa do
+        void nhapToaDo(){
+            int x1, y1;
+            System.out.print("Nhap toa do x: ");
+            x1 = sc.nextInt();
+            System.out.print("Nhap toa do y: ");
+            y1 = sc.nextInt();
+            //Gan toa do cho diem do
+            insertPoint(x1, y1);
         }
 
         //In ra man hinh
@@ -24,33 +37,23 @@ public class Point {
         }
 
         public static void main(String[] args) {
-            Scanner sc = new Scanner(System.in);
             Point A = new Point();
             Point B = new Point();
 
             //Gan toan do (3,5) cho diem A
             A.insertPoint(3, 5);
 
-            //Tao toa do cho diem B
-            int x1, y1;
-            System.out.print("Nhap toa do x: ");
-            x1 = sc.nextInt();
-            System.out.print("Nhap toa do y: ");
-            y1 = sc.nextInt();
-
-            //Gan toa do vua tao cho B
-            B.insertPoint(x1, y1);
-
-            //Khoang cach tu diem A den goc toa do
-            System.out.println("Khoang cach tu diem A den goc toa do = " + A.khoangCach());
-            //Khoang cach tu diem B den goc toa do
-            System.out.println("Khoang cach tu diem B den goc toa do = " + B.khoangCach());
+            //Nhap tu ban phim vao toa do diem B
+            B.nhapToaDo();
 
             //In ra man hinh 2 diem da tao
             System.out.print("Diem A");
             A.inManHinh();
             System.out.print("Diem B");
             B.inManHinh();
-            sc.close();
+
+            //Khoang cach tu diem den goc toa do
+            System.out.println("Khoang cach tu diem A den goc toa do = " + A.khoangCach());
+            System.out.println("Khoang cach tu diem B den goc toa do = " + B.khoangCach());
         }
 }
