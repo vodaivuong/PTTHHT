@@ -3,11 +3,12 @@ package javaBasic;
 import java.util.Scanner;
 
 public class Bai5 {
-    public static void sumSoDuong(int[] a, int n) {
+    
+    static void sumSoDuong(int[] a, int n) {
         Scanner scanner = new Scanner(System.in);
         int sum = 0;
         for (int i = 0; i < a.length; i++) {
-            System.out.print("Nhap phan tu thu " + i + " : ");
+            System.out.print("Nhap phan tu thu " + i + " cua day so: ");
             a[i] = scanner.nextInt();
             if (a[i] > 0) {
                 sum += a[i];
