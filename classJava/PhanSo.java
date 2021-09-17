@@ -10,6 +10,7 @@ public class PhanSo {
         this.mau = mau;
     }
      
+    //Gán dữ liệu nhập vào
      public int getTu() {
         return tu;
     }
@@ -34,10 +35,10 @@ public class PhanSo {
     //Nghich dao phan so
     void nghichDao(){
         int tuc, mauc;
-        tuc = getMau();
-        mauc = getTu();
-        setTu(tuc);
-        setMau(mauc);
+        tuc = this.getMau();
+        mauc = this.getTu();
+        this.setTu(tuc);
+        this.setMau(mauc);
     }
 
     //Tim uoc chung lon nhat
