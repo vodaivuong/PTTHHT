@@ -1,0 +1,10 @@
+RMI
+1. Định nghĩa 1 Interface (lop dung chung)
+2. Tạo lớp thực thi Implêmnt cho interace
+3. Cài đặt Server
+4. Cài Client
+5. Biên dịch
+	- javac
+	- rmic (file implement)
+	- start rmiregistry
+	- java Server, CLient
